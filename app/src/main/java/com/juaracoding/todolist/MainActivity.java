@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void setList(){
-        ToDoListAdapter itemArrayAdapter = new ToDoListAdapter(R.layout.item_todolist, itemList);
+        ExampleAdapter itemArrayAdapter = new ExampleAdapter( itemList);
 
         lstTodo.setLayoutManager(new LinearLayoutManager(this));
         lstTodo.setItemAnimator(new DefaultItemAnimator());

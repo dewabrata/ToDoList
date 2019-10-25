@@ -60,4 +60,19 @@ public class ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ViewHo
             Log.d("onclick", "onClick " + getLayoutPosition() + " " + txtTitle.getText());
         }
     }
+
+    static class ViewHolder2 extends RecyclerView.ViewHolder implements View.OnClickListener {
+        public TextView txtTitle;
+        public TextView txtTanggal;
+        public ViewHolder2(View itemView) {
+            super(itemView);
+            itemView.setOnClickListener(this);
+            txtTitle = (TextView) itemView.findViewById(R.id.txtTitle);
+            txtTanggal = (TextView) itemView.findViewById(R.id.txtTanggal);
+        }
+        @Override
+        public void onClick(View view) {
+            Log.d("onclick", "onClick " + getLayoutPosition() + " " + txtTitle.getText());
+        }
+    }
 }
